@@ -77,6 +77,10 @@ class _PhoneLoginAppState extends State<PhoneLoginApp> {
                       width: 200.0,
                       child: TextField(
                     keyboardType: TextInputType.number,
+                    inputFormatters: <TextInputFormatter>[
+                              WhitelistingTextInputFormatter.digitsOnly,
+                              LengthLimitingTextInputFormatter(10),
+                            ],
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Enter Your Number',

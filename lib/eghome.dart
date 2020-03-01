@@ -147,6 +147,7 @@ class EgHomeApp extends StatelessWidget {
             ),
           ),
         appBar: AppBar(title: Text("Tez Laundry"),
+        backgroundColor: Color(0xffd41BAFF),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.notifications),
@@ -160,11 +161,24 @@ class EgHomeApp extends StatelessWidget {
               color: Colors.white),
               onPressed: null),
         ],
-        bottom: TabBar(
-          tabs: <Widget>[
+        bottom: new TabBar(
+          tabs: [
+            new Container(
+              width: 30,
+              child: Image.asset('assets/t-shirt.png'),
+            ),
+            new Container(
+              width: 30,
+              child: Image.asset('assets/jeans.png'),
+            ),
+           
+          ] 
+        ),),
+        /*body: Stack(
+          children:<Widget>[
             
-          ] ),)
-        
+          ]
+        ),*/
       ),
     );
   }

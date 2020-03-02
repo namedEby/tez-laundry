@@ -163,14 +163,8 @@ class EgHomeApp extends StatelessWidget {
         ],
         bottom: new TabBar(
           tabs: [
-            new Container(
-              width: 30,
-              child: Image.asset('assets/t-shirt.png'),
-            ),
-            new Container(
-              width: 30,
-              child: Image.asset('assets/jeans.png'),
-            ),
+            Tab(icon: Icon(Icons.directions_car)),
+            Tab(icon: Icon(Icons.directions_transit))
            
           ] 
         ),),

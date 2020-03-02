@@ -3,6 +3,7 @@ import 'package:tez/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import './background2.dart';
+import 'eghome.dart';
 import 'dart:async';
 import 'dart:io';
 
@@ -112,7 +113,7 @@ class PhotoUploadAppState extends State<PhotoUploadApp>{
                       child: Image.asset('assets/arrow.png',height: 90,),
                       onPressed: () {
                       Navigator.push(context, MaterialPageRoute(
-                        builder: (context) =>  HomePageApp()  ));
+                        builder: (context) =>  EgHomeApp() ));
                       }
                     ),
            )

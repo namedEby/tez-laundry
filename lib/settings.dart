@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:tez/about.dart';
-import 'package:tez/account.dart';
-import 'package:tez/cart.dart';
-import 'package:tez/contact.dart';
-import 'package:tez/notificationpage.dart';
-import 'package:tez/order.dart';
-//import './bottomsheet.dart';
-import './billpage.dart';
-import 'package:tez/phonelogin.dart';
-import 'package:tez/services.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
+import 'about.dart';
+import 'account.dart';
+import 'cart.dart';
+import 'contact.dart';
+import 'notificationpage.dart';
+import 'order.dart';
+import 'phonelogin.dart';
+import 'services.dart';
 
-
-class MyCartPage extends StatelessWidget {
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
+class SettingsPage extends StatelessWidget{
+   final _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,6 +97,15 @@ class MyCartPage extends StatelessWidget {
                   },
                 ),
                 new ListTile(
+                  leading: Icon(Icons.settings,color: Colors.lightBlueAccent),
+                  title: new Text('Settings',style: TextStyle(fontSize: 17.0,fontFamily: 'Lato'),),
+                  onTap: (){
+                    Navigator.of(context).pop();
+                    Navigator.push(context, new MaterialPageRoute(
+                      builder: (BuildContext context) => new SettingsPage()));
+                  },
+                ),
+                new ListTile(
                   leading: Icon(Icons.phone,color: Colors.lightBlueAccent,),
                   title: new Text('Contact Us',style: TextStyle(fontSize: 17.0,fontFamily: 'Lato'),),
                   onTap: (){
@@ -142,189 +148,161 @@ class MyCartPage extends StatelessWidget {
                       builder: (BuildContext context) => new PhoneLoginApp()));
                   },
                 ),
-
               ],
             ),
           ),
         ),
-      body: Stack(
-        children:<Widget>[
-          Positioned(
-            left: 10,
-            top: 25,
-            child: new InkWell(
+        body: Stack(
+          children: <Widget>[
+            Column(
+        children: <Widget>[
+          Container(
+            child: Column(children: <Widget>[
+              Row(children: <Widget>[
+                SizedBox(width: 30),
+              new InkWell(
               child: Icon(Icons.menu),
               onTap: (){
                 _scaffoldKey.currentState.openDrawer();
-              },
-            )
-              
-             ),
-             Positioned(
-               left: 290,
-               top: 20,
-            child: new IconButton(
+              },),
+              SizedBox(width: 80),
+              Container(
+              alignment: Alignment.topCenter,
+              margin: EdgeInsets.only(top:80),
+              child:Text("Settings",
+              style: TextStyle(
+                fontSize:20,
+                fontFamily: 'Lato'
+              )),
+            ),
+            SizedBox(width: 80),
+              new IconButton(
               icon: Image.asset('assets/notification.png'),
               iconSize: 20,
               onPressed: (){
               Navigator.push(context, MaterialPageRoute(
-              builder: (context)=> NotificationPageApp(),
-              ));
-               
-              },)
-             ),
-             Container(
-              alignment: Alignment.topCenter,
-              margin: EdgeInsets.only(top:50),
-              child:Text("Tez Laundry",
-              style: TextStyle(
-                fontSize:20,
-              )),
-            ), 
-             
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Center(
-                child: Text("My Cart",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ))
-              ),
-              SizedBox(
-                height: 50
-              ),
+              builder: (context)=> NotificationPageApp()));  
+              },),
+              ]),
+            ]
+            ),),
+            SizedBox(height: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
               Container(
-                height: 60,
-              child:Card(
-                child: Row(children: <Widget>[
-                  SizedBox(width:10),
-                  Image.asset('assets/t-shirt.png',height:40,width:80,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 5),
-                  Text("Shirt",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width:50),
-                  Text("X",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 20),
-                  Text("4",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 30),
-                  Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 20),
-                  Text("80",
-                  style: TextStyle(fontSize:18,)),
-                ]),
-              ),),
-              Container(
-                height: 60,
-              child:Card(
-                child: Row(children: <Widget>[
-                  SizedBox(width:10),
-                  Image.asset('assets/jeans.png',height:40,width:80,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 5),
-                  Text("Pants",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width:50),
-                  Text("X",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 20),
-                  Text("4",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 30),
-                  Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 20),
-                  Text("80",
-                  style: TextStyle(fontSize:18,)),
-                ]),
-              ),),
-              Container(
-                height: 60,
-              child:Card(
-                child: Row(children: <Widget>[
-                  SizedBox(width:10),
-                  Image.asset('assets/dress.png',height:40,width:80,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 5),
-                  Text("Pants",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width:50),
-                  Text("X",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 20),
-                  Text("4",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 30),
-                  Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 20),
-                  Text("80",
-                  style: TextStyle(fontSize:18,)),
-                ]),
-              ),),
-              Container(
-                height: 60,
-              child:Card(
-                child: Row(children: <Widget>[
-                  SizedBox(width:10),
-                  Image.asset('assets/currency.png',height:40,width:80,),
-                  SizedBox(width: 5),
-                  Text("TOTAL",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width:60),
-                  Text("=",
-                  style: TextStyle(fontSize:18)),
-                  SizedBox(width: 45),
-                  Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 20),
-                  Text("240",
-                  style: TextStyle(fontSize:18,)),
-                ]),
-              ),),
-            ],
-          ),
-          Align(
-              alignment:Alignment.bottomCenter,
-            child: Container(    
-              height: 50,
-              width:300,
-              decoration: new BoxDecoration(
-                  color: Color(0xFF01579B), //new Color.fromRGBO(255, 0, 0, 0.0),
-                  borderRadius: new BorderRadius.only(
-                    topLeft:  const  Radius.circular(40.0),
-                    topRight: const  Radius.circular(40.0))
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children:<Widget>[
-                    Container(
-                      alignment:Alignment.center,
-                      margin: EdgeInsets.only(left:30),
-                      child: InkWell(
-                        child:Text("Request Pickup",
+                height: 100,
+                child: Card(
+                  child:Column(children: <Widget>[
+                    SizedBox(height: 20),
+                    Row(children: <Widget>[
+                      SizedBox(width: 20),
+                      Text("John Smith",
+                      style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: 'Lato'
+                    )),
+                    SizedBox(width: 180),
+                    Text("EDIT",
                     style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
+                      fontSize: 15,
+                      fontFamily: 'Lato',
+                      fontWeight: FontWeight.bold
                     )),
-                    onTap:(){
-                      Navigator.push(context,
-                      MaterialPageRoute(
-                        builder: (context)=> BillPage(),));
-                    }
+                    ]),
+                    //SizedBox(width: 50),
+                    Row(children: <Widget>[
+                      SizedBox(width: 20),
+                      Text("6457864578",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: 'Lato',
                     )),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Image.asset('assets/motorbiking.png',height:30),
-                   
-                  ]
-                ),  
+                    ],),
+                    Row(children: <Widget>[
+                      SizedBox(width: 20),
+                      Text("smithjohn@gmail.com",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: 'Lato',
+                    )),
+                    ],)
+                  ])
+                ),
               ),
-            )
+              SizedBox(height: 10),
+              Container(
+                height: 130,
+                child: Card(
+                  child: Column(
+                    children: <Widget>[
+                      Column(children: <Widget>[
+                        SizedBox(height: 20),
+                        Row(children: <Widget>[
+                          SizedBox(width: 20,),
+                          Text("LOCATION",
+                          style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Lato'
+                          )),
+                          SizedBox(width: 100),
+                          Text("ADD",
+                          style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.bold
+                          )),
+                          SizedBox(width: 45),
+                          Text("EDIT",
+                          style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.bold
+                          )),
+                        ],),
+                        SizedBox(height: 10),
+                        Row(children: <Widget>[
+                          SizedBox(width: 20),
+                          Text("Lorem ipsum dolor sit amet,",
+                          style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Lato',
+                          )),
+                        ],),
+                        Row(children: <Widget>[
+                          SizedBox(width: 20),
+                          Text("consetetur sadipscing elitr, sed",
+                          style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Lato',
+                          )),
+                        ],),
+                        Row(children: <Widget>[
+                          SizedBox(width: 20),
+                          Text("diam nonumy eirmod tempor",
+                          style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Lato',
+                          )),
+                        ],)
+                      ],)
+                    ]
+                  ),
+                ),
+              ),
+              Card(
+                child: Column(children: <Widget>[
+                  SizedBox(height: 20),
+                  
+                ]),
+              ),
+            ])
 
-        ]
-      )
+            ])
+          ]
+        ),
     );
   }
+
 }

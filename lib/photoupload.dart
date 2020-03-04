@@ -1,5 +1,4 @@
 import 'dart:ui';
-import 'package:tez/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import './background2.dart';

@@ -90,6 +90,12 @@ flutter:
     - assets/logout.png
     - assets/voucher.png
     - assets/boy.png
+    - assets/creditcard.png
+    - assets/paytm.png
+    - assets/hdfc.png
+    - assets/icici.png
+    - assets/axis.png
+    - assets/sbi.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

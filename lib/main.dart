@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tez/background1.dart';
-//import 'package:tez/eghome.dart';
+import 'package:tez/payments.dart';
 import 'package:tez/second_page.dart';
 
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-  home: MyApp(),
+  home: PaymentPage(),
     )
   );
 } 

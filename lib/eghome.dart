@@ -336,11 +336,14 @@ class EgHomeApp extends StatelessWidget{
                     )
                   ) 
                   ),
-                  
-                  
+                
           
                 ]
               )
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child:Image.asset('assets/ads.jpg')
             )
         ]
       ),

@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:tez/background1.dart';
 //import 'package:tez/settings.dart';
 import 'package:tez/second_page.dart';
 import 'order.dart';
 
 void main() {
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
   home: OrderApp(),

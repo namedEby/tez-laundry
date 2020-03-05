@@ -3,7 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:tez/phonelogin.dart';
 import 'package:tez/services.dart';
 import 'package:tez/settings.dart';
-
+import 'rate.dart';
 import 'about.dart';
 import 'account.dart';
 import 'cart.dart';
@@ -37,7 +37,7 @@ class OrderApp extends StatelessWidget{
                   accountEmail: new Text('username@test.com'),
                   currentAccountPicture: new CircleAvatar(
                     backgroundImage: new AssetImage('assets/man.png'),
-                    backgroundColor: Colors.red,
+                    //backgroundColor: Colors.red,
                   ),
                 ),
                 
@@ -200,12 +200,88 @@ class OrderApp extends StatelessWidget{
                   fontWeight: FontWeight.bold,
                 ))
               ),
-              SizedBox(height: 20,),
-              Card(
+              SizedBox(height: 20),
+              Container(
+                height: 130,
+                child: Card(
                 child:Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    SizedBox(height: 10),
+                    Row(children: <Widget>[
+                      SizedBox(width: 80),
+                      Image.asset('assets/rupees.png',height:10,color: Colors.lightBlueAccent),
+                      Text("80"),
+                      SizedBox(width: 160),
+                      Container(
+                        height: 30,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30.0)
+                          ),
+                          border: Border.all(
+                            color: Colors.lightBlueAccent,
+                          ),
+                        ),
+                        child: Center(
+                          child: InkWell(
+                            child: Text("REORDER"), 
+                            onTap: () {
+                              Navigator.push(context, new MaterialPageRoute(
+                                builder: (context) => RatePage()
+                              ));
+                            },
+                          ),
+                        ),
+                      )
+                    ]),
+                    //SizedBox(height: 0.5),
+                    Row(children: <Widget>[
+                      SizedBox(width: 20),
+                      Image.asset('assets/order.png'),
+                      SizedBox(width: 20),
+                      Text("JAN 11,2017"
+                      ),
+                    ]),
+                    //SizedBox(height: 0.5),
+                    Row(children: <Widget>[
+                      SizedBox(width: 80),
+                      Text("Kaloor",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'Lato'
+                      )),
+                      SizedBox(width: 140),
+                      Container(
+                        height: 30,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.lightBlueAccent,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30.0)
+                          ),
+                        ),
+                        child: Center(
+                          child: InkWell(
+                            child: Text("RATE"), 
+                            onTap: null,
+                          ),
+                        ),
+                      )
+                    ]),
+                  ]) ,)
+              ),
+                    SizedBox(height: 10),
+                    Container(
+                      height: 130,
+                      child: Card(
+                child:Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(height: 10),
                     Row(children: <Widget>[
                       SizedBox(width: 80),
                       Image.asset('assets/rupees.png',height:10,color: Colors.lightBlueAccent),
@@ -264,8 +340,79 @@ class OrderApp extends StatelessWidget{
                         ),
                       )
                     ]),
-]) ,),
+                  ]) ,)
+                    ),
+                    SizedBox(height: 20),
+              Container(
+                height: 130,
+                child: Card(
+                child:Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(height: 10),
+                    Row(children: <Widget>[
+                      SizedBox(width: 80),
+                      Image.asset('assets/rupees.png',height:10,color: Colors.lightBlueAccent),
+                      Text("80"),
+                      SizedBox(width: 160),
+                      Container(
+                        height: 30,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30.0)
+                          ),
+                          border: Border.all(
+                            color: Colors.lightBlueAccent,
+                          ),
+                        ),
+                        child: Center(
+                          child: InkWell(
+                            child: Text("REORDER"), 
+                            onTap: null,
+                          ),
+                        ),
+                      )
+                    ]),
+                    //SizedBox(height: 0.5),
+                    Row(children: <Widget>[
+                      SizedBox(width: 20),
+                      Image.asset('assets/order.png'),
+                      SizedBox(width: 20),
+                      Text("JAN 11,2017"
+                      ),
+                    ]),
+                    //SizedBox(height: 0.5),
+                    Row(children: <Widget>[
+                      SizedBox(width: 80),
+                      Text("Kaloor",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'Lato'
+                      )),
+                      SizedBox(width: 140),
+                      Container(
+                        height: 30,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.lightBlueAccent,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30.0)
+                          ),
+                        ),
+                        child: Center(
+                          child: InkWell(
+                            child: Text("RATE"), 
+                            onTap: null,
+                          ),
+                        ),
+                      )
+                    ]),
+                  ]) ,)
+              ),
                     
+
               ],)
          ])
      ],)

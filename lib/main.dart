@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:tez/background1.dart';
-import 'package:tez/settings.dart';
+//import 'package:tez/settings.dart';
 import 'package:tez/second_page.dart';
+import 'order.dart';
 
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-  home: SettingsPage(),
+  home: OrderApp(),
     )
   );
 } 

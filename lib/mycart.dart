@@ -11,6 +11,8 @@ import 'package:tez/phonelogin.dart';
 import 'package:tez/services.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
+import 'settings.dart';
+
 
 
 class MyCartPage extends StatelessWidget {
@@ -97,6 +99,15 @@ class MyCartPage extends StatelessWidget {
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
                       builder: (BuildContext context) => new AboutPage()));
+                  },
+                ),
+                 new ListTile(
+                  leading: Icon(Icons.settings,color: Colors.lightBlueAccent),
+                  title: new Text('Settings',style: TextStyle(fontSize: 17.0,fontFamily: 'Lato'),),
+                  onTap: (){
+                    Navigator.of(context).pop();
+                    Navigator.push(context, new MaterialPageRoute(
+                      builder: (BuildContext context) => new SettingsPage()));
                   },
                 ),
                 new ListTile(

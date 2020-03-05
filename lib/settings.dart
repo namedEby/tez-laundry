@@ -31,9 +31,7 @@ class SettingsPage extends StatelessWidget{
                   title: new Text('5648697987',style: TextStyle(fontSize: 17.0,fontFamily: 'Lato'),),  
                 ),
                 ),
-                
                   new UserAccountsDrawerHeader(
-                    
                   accountName: new Text('Username'),
                   accountEmail: new Text('username@test.com'),
                   currentAccountPicture: new CircleAvatar(
@@ -291,11 +289,55 @@ class SettingsPage extends StatelessWidget{
                   ),
                 ),
               ),
-              Card(
-                child: Column(children: <Widget>[
-                  SizedBox(height: 20),
-                  
-                ]),
+              Container(
+                height: 90,
+                child: Card(
+                  child: Column(children: <Widget>[
+                    SizedBox(height: 20),
+                    Row(children: <Widget>[
+                      SizedBox(width: 20,),
+                      Text("HELP",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'Lato'
+                      ),),
+                    ]),
+                    //SizedBox(height: 10),
+                    Row(children: <Widget>[
+                      SizedBox(width: 20,),
+                      Text("FAQs/LINKS",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'Lato'
+                      ),),
+                    ])
+                  ]),
+                ),
+              ),
+               Container(
+                height: 60,
+                child: Card(
+                  child: Column(children: <Widget>[
+                    SizedBox(height: 20),
+                    Row(children: <Widget>[
+                      SizedBox(width: 20,),
+                      InkWell(
+                          child: Text("LOGOUT",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.bold,
+                        ),),
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => PhoneLoginApp()
+                          ));
+                        },
+                      ),
+                    ]),
+                    
+                  ]),
+                ),
               ),
             ])
 

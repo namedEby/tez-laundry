@@ -5,6 +5,7 @@ import 'package:tez/cart.dart';
 import 'package:tez/contact.dart';
 import 'package:tez/notificationpage.dart';
 import 'package:tez/order.dart';
+import 'package:tez/settings.dart';
 import './premium.dart';
 import 'package:tez/phonelogin.dart';
 import 'package:tez/services.dart';
@@ -97,6 +98,15 @@ class BillPage extends StatelessWidget{
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
                       builder: (BuildContext context) => new AboutPage()));
+                  },
+                ),
+                 new ListTile(
+                  leading: Icon(Icons.settings,color: Colors.lightBlueAccent),
+                  title: new Text('Settings',style: TextStyle(fontSize: 17.0,fontFamily: 'Lato'),),
+                  onTap: (){
+                    Navigator.of(context).pop();
+                    Navigator.push(context, new MaterialPageRoute(
+                      builder: (BuildContext context) => new SettingsPage()));
                   },
                 ),
                 new ListTile(

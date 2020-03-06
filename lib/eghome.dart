@@ -211,7 +211,12 @@ class EgHomeApp extends StatelessWidget{
                           children: [ 
                             Column(
                               children: <Widget>[
-                                Image.asset('assets/washingm2.png',width: 100,height: 50),
+                                InkWell(
+                                  child: Image.asset('assets/washingm2.png',width: 100,height: 50),
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) => HomeViewApp()));
+                                  },),
                                 InkWell(
                               child: Text('Washing',
                               style: TextStyle(
@@ -231,7 +236,12 @@ class EgHomeApp extends StatelessWidget{
                            // VerticalDivider(thickness: 2,),
                              Column(
                               children: <Widget>[
-                                Image.asset('assets/laundry.png',width: 100,height: 50),
+                                InkWell(
+                                  child: Image.asset('assets/laundry.png',width: 100,height: 50),
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) => HomeViewApp()));
+                                  },),
                                 InkWell(
                               child: Text('Others',
                               style: TextStyle(
@@ -251,7 +261,12 @@ class EgHomeApp extends StatelessWidget{
                              //VerticalDivider(thickness: 2,),
                             Column(
                               children: <Widget>[
-                                Image.asset('assets/fashion.png',width: 100,height: 50),
+                                InkWell(
+                                  child: Image.asset('assets/fashion.png',width: 100,height: 50),
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) => HomeViewApp()));
+                                  },),
                                 InkWell(
                               child: Text('Others',
                               style: TextStyle(
@@ -278,7 +293,12 @@ class EgHomeApp extends StatelessWidget{
                           children:[
                              Column(
                               children: <Widget>[
-                                Image.asset('assets/Iron.png',width: 100,height: 50),
+                                InkWell(
+                                  child: Image.asset('assets/Iron.png',width: 100,height: 50),
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) => HomeViewApp()));
+                                  },),
                                 InkWell(
                               child: Text('Others',
                               style: TextStyle(
@@ -296,7 +316,12 @@ class EgHomeApp extends StatelessWidget{
                             // VerticalDivider(thickness: 2,),
                             Column(
                               children: <Widget>[
-                                Image.asset('assets/washing.png',width: 100,height: 50),
+                                InkWell(
+                                  child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) => HomeViewApp()));
+                                  },),
                                 InkWell(
                               child: Text('Others',
                               style: TextStyle(
@@ -314,7 +339,12 @@ class EgHomeApp extends StatelessWidget{
                             // VerticalDivider(thickness: 2,),
                             Column(
                               children: <Widget>[
-                                Image.asset('assets/towel.png',width: 100,height: 50),
+                                InkWell(
+                                  child: Image.asset('assets/towel.png',width: 100,height: 50),
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(
+                                      builder: (context) => HomeViewApp()));
+                                  },),
                                 InkWell(
                               child: Text('Others',
                               style: TextStyle(

@@ -3,6 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:tez/phonelogin.dart';
 import 'package:tez/services.dart';
 import 'package:tez/settings.dart';
+import 'eghome.dart';
 import 'rate.dart';
 import 'about.dart';
 import 'account.dart';
@@ -228,10 +229,9 @@ class OrderApp extends StatelessWidget{
                         child: Center(
                           child: InkWell(
                             child: Text("REORDER"), 
-                            onTap: () {
-                              Navigator.push(context, new MaterialPageRoute(
-                                builder: (context) => RatePage()
-                              ));
+                             onTap: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => EgHomeApp() ));
                             },
                           ),
                         ),
@@ -266,7 +266,10 @@ class OrderApp extends StatelessWidget{
                         child: Center(
                           child: InkWell(
                             child: Text("RATE"), 
-                            onTap: null,
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => RatePage() ));
+                            },
                           ),
                         ),
                       )
@@ -301,7 +304,10 @@ class OrderApp extends StatelessWidget{
                         child: Center(
                           child: InkWell(
                             child: Text("REORDER"), 
-                            onTap: null,
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => EgHomeApp() ));
+                            },
                           ),
                         ),
                       )
@@ -335,7 +341,10 @@ class OrderApp extends StatelessWidget{
                         child: Center(
                           child: InkWell(
                             child: Text("RATE"), 
-                            onTap: null,
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => RatePage() ));
+                            },
                           ),
                         ),
                       )
@@ -370,7 +379,10 @@ class OrderApp extends StatelessWidget{
                         child: Center(
                           child: InkWell(
                             child: Text("REORDER"), 
-                            onTap: null,
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => EgHomeApp() ));
+                            },
                           ),
                         ),
                       )
@@ -404,7 +416,10 @@ class OrderApp extends StatelessWidget{
                         child: Center(
                           child: InkWell(
                             child: Text("RATE"), 
-                            onTap: null,
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => RatePage() ));
+                            },
                           ),
                         ),
                       )

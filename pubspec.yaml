@@ -31,7 +31,7 @@ dependencies:
   pin_code_fields: ^2.3.0+3
   flutter_local_notifications: ^1.2.0+3
   path_provider: ^1.6.1
-  smooth_star_rating: ^1.0.4+2
+  flutter_rating_bar: ^3.0.1+1
 
 
   

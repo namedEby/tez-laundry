@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tez/background1.dart';
-//import 'package:tez/bottomsheet.dart';
-//import 'package:tez/eghome.dart';
 import 'package:tez/second_page.dart';
-import 'rate.dart';
-//import 'order.dart';
+//import 'rate.dart';
+import 'mycart.dart';
 
 
 void main() {
@@ -15,7 +13,7 @@ void main() {
   ]);
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-  home: RatePage(),
+  home: MyCartPage(),
     )
   );
 } 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smooth_star_rating/smooth_star_rating.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
  class RatePage extends StatefulWidget {
   @override
@@ -7,7 +7,7 @@ import 'package:smooth_star_rating/smooth_star_rating.dart';
 }
 
 class _RatePageState extends State<RatePage> {
-  var rating;
+  double rating;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,21 +47,40 @@ class _RatePageState extends State<RatePage> {
                   ),
                   SizedBox(height: 30),
                   Text("Rate your Experience",style: TextStyle(fontFamily: 'Lato',color: Colors.white)),
-                  SmoothStarRating(
-          allowHalfRating: true,
-          onRatingChanged: (v) {
-            rating = v;
-            setState(() {});
-          },
-          starCount: 5,
-          rating: rating,
-          size: 40.0,
-          filledIconData: Icons.blur_off,
-          halfFilledIconData: Icons.blur_on,
-          color: Colors.green,
-          borderColor: Colors.green,
-          spacing:0.0
-        )
+                  SizedBox(height: 20),
+                 RatingBar(
+                  initialRating: 0,
+                  minRating: 1,
+                  direction: Axis.horizontal,
+                  allowHalfRating: true,
+                  itemCount: 5,
+                  itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                  itemBuilder: (context, _) => Icon(
+                    Icons.star,
+                    //size: 10,
+                    color: Colors.amber,
+                    ),
+                    onRatingUpdate: (rating) {
+                    print(rating);
+                    },
+                  ),
+                  SizedBox(height: 30),
+                  Container(
+                        height: 40,
+                        width: 270,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0)
+                          ),
+                          color: Colors.lightBlueAccent,
+                        ),
+                        child: Center(
+                          child: InkWell(
+                            child: Text("SUBMIT RATING"), 
+                             onTap: null,
+                          ),
+                        ),
+                      )
                 ]),
             ),
           )

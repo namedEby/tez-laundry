@@ -165,8 +165,6 @@ class EgHomeApp extends StatelessWidget{
         body: Stack(
           children: <Widget>[
             Container(
-              //height: ,
-              //width: ,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[ 

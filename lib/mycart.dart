@@ -159,139 +159,143 @@ class MyCartPage extends StatelessWidget {
           ),
         ),
       body: Stack(
-        children:<Widget>[
-          Positioned(
-            left: 10,
-            top: 25,
-            child: new InkWell(
+        children:<Widget>[    
+          Column(
+            children: <Widget>[
+              Container(
+            child: Column(children: <Widget>[
+              Row(children: <Widget>[
+                SizedBox(width: 20),
+              new InkWell(
               child: Icon(Icons.menu),
               onTap: (){
                 _scaffoldKey.currentState.openDrawer();
-              },
-            )
-              
-             ),
-             Positioned(
-               left: 290,
-               top: 20,
-            child: new IconButton(
+              },),
+              SizedBox(width: 80),
+              Container(
+              alignment: Alignment.topCenter,
+              margin: EdgeInsets.only(top:60),
+              child:Text("Tez Laundry",
+              style: TextStyle(
+                fontSize:20,
+                fontFamily: 'Lato'
+              )),
+            ),
+            SizedBox(width: 60),
+              new IconButton(
               icon: Image.asset('assets/notification.png'),
               iconSize: 20,
               onPressed: (){
               Navigator.push(context, MaterialPageRoute(
-              builder: (context)=> NotificationPageApp(),
-              ));
-               
-              },)
-             ),
-             Container(
-              alignment: Alignment.topCenter,
-              margin: EdgeInsets.only(top:50),
-              child:Text("Tez Laundry",
-              style: TextStyle(
-                fontSize:20,
-              )),
-            ), 
-             
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Center(
-                child: Text("My Cart",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ))
+              builder: (context)=> NotificationPageApp()));  
+              },),
+              ]),
+              ]),
               ),
-              SizedBox(
-                height: 50
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(
+                    height: 40
+                  ),
+                  Center(
+                    child: Text("My Cart",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ))
+                  ),
+                  SizedBox(
+                    height: 50
+                  ),
+                  Container(
+                    height: 60,
+                  child:Card(
+                    child: Row(children: <Widget>[
+                      SizedBox(width:10),
+                      Image.asset('assets/t-shirt.png',height:40,width:80,color: Color(0xffb41BAFF)),
+                      SizedBox(width: 5),
+                      Text("Shirt",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width:50),
+                      Text("X",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width: 20),
+                      Text("4",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width: 30),
+                      Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
+                      SizedBox(width: 20),
+                      Text("80",
+                      style: TextStyle(fontSize:18,)),
+                    ]),
+                  ),),
+                  Container(
+                    height: 60,
+                  child:Card(
+                    child: Row(children: <Widget>[
+                      SizedBox(width:10),
+                      Image.asset('assets/jeans.png',height:40,width:80,color: Color(0xffb41BAFF)),
+                      SizedBox(width: 5),
+                      Text("Pants",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width:50),
+                      Text("X",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width: 20),
+                      Text("4",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width: 30),
+                      Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
+                      SizedBox(width: 20),
+                      Text("80",
+                      style: TextStyle(fontSize:18,)),
+                    ]),
+                  ),),
+                  Container(
+                    height: 60,
+                  child:Card(
+                    child: Row(children: <Widget>[
+                      SizedBox(width:10),
+                      Image.asset('assets/dress.png',height:40,width:80,color: Color(0xffb41BAFF)),
+                      SizedBox(width: 5),
+                      Text("Pants",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width:50),
+                      Text("X",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width: 20),
+                      Text("4",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width: 30),
+                      Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
+                      SizedBox(width: 20),
+                      Text("80",
+                      style: TextStyle(fontSize:18,)),
+                    ]),
+                  ),),
+                  Container(
+                    height: 60,
+                  child:Card(
+                    child: Row(children: <Widget>[
+                      SizedBox(width:10),
+                      Image.asset('assets/currency.png',height:40,width:80,),
+                      SizedBox(width: 5),
+                      Text("TOTAL",
+                      style: TextStyle(fontSize:18,)),
+                      SizedBox(width:60),
+                      Text("=",
+                      style: TextStyle(fontSize:18)),
+                      SizedBox(width: 45),
+                      Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
+                      SizedBox(width: 20),
+                      Text("240",
+                      style: TextStyle(fontSize:18,)),
+                    ]),
+                  ),),
+                ],
               ),
-              Container(
-                height: 60,
-              child:Card(
-                child: Row(children: <Widget>[
-                  SizedBox(width:10),
-                  Image.asset('assets/t-shirt.png',height:40,width:80,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 5),
-                  Text("Shirt",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width:50),
-                  Text("X",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 20),
-                  Text("4",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 30),
-                  Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 20),
-                  Text("80",
-                  style: TextStyle(fontSize:18,)),
-                ]),
-              ),),
-              Container(
-                height: 60,
-              child:Card(
-                child: Row(children: <Widget>[
-                  SizedBox(width:10),
-                  Image.asset('assets/jeans.png',height:40,width:80,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 5),
-                  Text("Pants",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width:50),
-                  Text("X",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 20),
-                  Text("4",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 30),
-                  Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 20),
-                  Text("80",
-                  style: TextStyle(fontSize:18,)),
-                ]),
-              ),),
-              Container(
-                height: 60,
-              child:Card(
-                child: Row(children: <Widget>[
-                  SizedBox(width:10),
-                  Image.asset('assets/dress.png',height:40,width:80,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 5),
-                  Text("Pants",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width:50),
-                  Text("X",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 20),
-                  Text("4",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width: 30),
-                  Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 20),
-                  Text("80",
-                  style: TextStyle(fontSize:18,)),
-                ]),
-              ),),
-              Container(
-                height: 60,
-              child:Card(
-                child: Row(children: <Widget>[
-                  SizedBox(width:10),
-                  Image.asset('assets/currency.png',height:40,width:80,),
-                  SizedBox(width: 5),
-                  Text("TOTAL",
-                  style: TextStyle(fontSize:18,)),
-                  SizedBox(width:60),
-                  Text("=",
-                  style: TextStyle(fontSize:18)),
-                  SizedBox(width: 45),
-                  Image.asset('assets/rupees.png',height:20,width: 10,color: Color(0xffb41BAFF)),
-                  SizedBox(width: 20),
-                  Text("240",
-                  style: TextStyle(fontSize:18,)),
-                ]),
-              ),),
             ],
           ),
           Align(

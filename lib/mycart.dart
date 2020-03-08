@@ -331,7 +331,7 @@ class MyCartPage extends StatelessWidget {
                     SizedBox(
                       width: 20,
                     ),
-                    Image.asset('assets/motorbiking.png',height:30),
+                    Image.asset('assets/bike.png',height:30),
                    
                   ]
                 ),  

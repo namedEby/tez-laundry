@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tez/background1.dart';
+import 'package:tez/banksuccess.dart';
 import 'package:tez/second_page.dart';
 //import 'rate.dart';
-import 'mycart.dart';
+//import 'mycart.dart';
 
 
 void main() {
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+  
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-  home: MyCartPage(),
+  home: SuccessPage(),
     )
   );
 } 
@@ -39,6 +37,10 @@ class _MyAppState extends State<MyApp>{
   
   @override
   Widget build(BuildContext context) {
+     SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
      return Scaffold(
       body: Stack(
         children: <Widget>[

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tez/background2.dart';
 
-import 'bankfail.dart';
-
-class SuccessPage extends StatelessWidget {
+class FailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,12 +23,12 @@ class SuccessPage extends StatelessWidget {
                       fontFamily: 'Lato'
                     ),)),
                     SizedBox(width: 10,),
-                    Center(child: Text("Successful",
+                    Center(child: Text("Failed",
                     style: TextStyle(
                       fontSize: 38.0,
                       fontWeight: FontWeight.normal,
                       fontFamily: 'Lato',
-                      color: Colors.green,
+                      color: Colors.red,
                     ),)),  
                 ],
               ),
@@ -210,21 +208,14 @@ class SuccessPage extends StatelessWidget {
               SizedBox(height: 20),
              Row(children: <Widget>[
                SizedBox(width: 13),
-               Text("YOUR",
+               Text("PLEASE RETRY",
                style: TextStyle(
                  fontSize: 19,
                  fontWeight: FontWeight.normal,
                  fontFamily: 'Lato'
                ),),
-               SizedBox(width: 10,),
-               Image.asset('assets/boy.png',height: 40),
-               SizedBox(width: 10,),
-               Text("IS ON  YOUR WAY",
-                style: TextStyle(
-                 fontSize: 19,
-                 fontWeight: FontWeight.normal,
-                 fontFamily: 'Lato'
-               ),)
+               SizedBox(width: 20),
+               Image.asset('assets/rotate.png',color: Colors.lightBlueAccent,height: 40,)
              ]),
              Container(
                alignment: Alignment.centerRight,
@@ -243,4 +234,3 @@ class SuccessPage extends StatelessWidget {
     );
   }
 }
-// tempor invidunt ut labore et

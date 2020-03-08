@@ -366,7 +366,6 @@ class PaymentPage extends StatelessWidget {
                       width: 20,
                     ),
                     Image.asset('assets/bike.png',height:30),
-                   
                   ]
                 ),  
               ),

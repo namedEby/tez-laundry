@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tez/background1.dart';
-import 'package:tez/banksuccess.dart';
+//import 'package:tez/bankfail.dart';
 import 'package:tez/second_page.dart';
-//import 'rate.dart';
-//import 'mycart.dart';
+import 'emailsignup.dart';
 
 
 void main() {
-  
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-  home: SuccessPage(),
+  home: EmailSignUp(),
     )
   );
 } 

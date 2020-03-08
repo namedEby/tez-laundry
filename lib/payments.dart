@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tez/about.dart';
 import 'package:tez/account.dart';
+import 'package:tez/banksuccess.dart';
 import 'package:tez/cart.dart';
 import 'package:tez/contact.dart';
 import 'package:tez/notificationpage.dart';
@@ -359,7 +360,7 @@ class PaymentPage extends StatelessWidget {
                     onTap:(){
                       Navigator.push(context,
                       MaterialPageRoute(
-                        builder: (context)=> PaymentPage()));
+                        builder: (context)=> SuccessPage()));
                     }
                     )),
                     SizedBox(

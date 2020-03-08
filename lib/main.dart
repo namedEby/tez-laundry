@@ -3,13 +3,13 @@ import 'package:flutter/services.dart';
 import 'package:tez/background1.dart';
 //import 'package:tez/bankfail.dart';
 import 'package:tez/second_page.dart';
-import 'emailsignup.dart';
+//import 'emailsignup.dart';
 
 
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-  home: EmailSignUp(),
+  home: MyApp(),
     )
   );
 } 

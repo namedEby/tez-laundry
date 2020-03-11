@@ -9,6 +9,7 @@ class EmailLoginApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: true,
       body:Stack(children: <Widget>[
         Background2App(),
        Padding(
@@ -48,7 +49,6 @@ class EmailLoginApp extends StatelessWidget{
                       ),),
                       ),
                     SizedBox(height: 10,),                    
-                    
                     TextField(
                     obscureText: false,
                     autofocus: true,
@@ -77,7 +77,7 @@ class EmailLoginApp extends StatelessWidget{
                     TextField(
                       obscureText: true,
                       style: TextStyle(
-                      fontFamily: 'Roboto',
+                      fontFamily: 'Lato',
                       fontSize: 20.0
                       ),
                       decoration: InputDecoration(

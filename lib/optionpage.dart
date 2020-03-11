@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tez/background2.dart';
-import 'package:tez/emaillogin.dart';
-//import 'package:tez/phonelogin.dart';
 import 'package:tez/welcomepage.dart';
+
+import 'emailsignup.dart';
 
 class OptionPageApp extends StatelessWidget{ 
   @override
@@ -35,7 +35,7 @@ class OptionPageApp extends StatelessWidget{
                       )),
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => EmailLoginApp(),
+                    builder: (context) => EmailSignUp(),
                   ));
                 }
               ),

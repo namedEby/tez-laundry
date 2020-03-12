@@ -1,8 +1,9 @@
 import 'dart:async';
 import  'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 import 'package:tez/background3.dart';
 import 'package:tez/photoupload.dart';
+import 'package:pin_entry_text_field/pin_entry_text_field.dart';
 
 
 class OtpPageApp extends StatefulWidget{
@@ -39,7 +40,42 @@ class _OtpPageAppState extends State<OtpPageApp> {
                 ),
               ),
               Center(
-              child:Column(
+              child: Container(
+                child: PinEntryTextField(
+                  showFieldAsBox: true,
+                  onSubmit: (String pin){
+                    showDialog(
+                      context: context,
+                      builder: (context){
+                        return AlertDialog(
+                          title: Text("Pin"),
+                          content: Text('Pin entered is $pin'),
+                        );
+                      }
+                    ); //end showDialog()
+                  }, // end onSubmit
+                ),
+              )
+              ),
+              Container(
+            margin: EdgeInsets.only(left:200,top: 170),
+            alignment: Alignment.center,
+            child: IconButton(
+            icon: Image.asset('assets/arrow.png'),
+            iconSize: 100,
+           onPressed: (){
+            Navigator.push(context, 
+            MaterialPageRoute(builder: (context) => PhotoUploadApp() ));
+          },)
+          ), 
+
+        ]
+      )
+    );   
+  }
+}
+
+/* Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -175,25 +211,4 @@ class _OtpPageAppState extends State<OtpPageApp> {
                     ]
                     ),
                 ]
-              ),
-              ),
-              Container(
-            margin: EdgeInsets.only(left:200,top: 170),
-            alignment: Alignment.center,
-            child: IconButton(
-            icon: Image.asset('assets/arrow.png'),
-            iconSize: 100,
-           onPressed: (){
-            Navigator.push(context, 
-            MaterialPageRoute(builder: (context) => PhotoUploadApp() ));
-          },)
-          ), 
-
-        ]
-      )
-    );
-        
-      
-    
-  }
-}
+              ),*/

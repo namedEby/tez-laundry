@@ -11,8 +11,16 @@ import 'notificationpage.dart';
 import 'order.dart';
 import 'listcontent.dart';
 import 'bottomsheet.dart';
+import 'package:translator/translator.dart';
 
-class EgHomeApp extends StatelessWidget{
+
+class EgHomeApp extends StatefulWidget{
+  @override
+  _EgHomeAppState createState() => _EgHomeAppState();
+}
+
+class _EgHomeAppState extends State<EgHomeApp> {
+ 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -44,7 +52,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new AccountApp()));
+                      builder: (BuildContext context) => AccountApp()));
                   },
                 ),
                 new ListTile(
@@ -53,7 +61,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new ServicesApp()));
+                      builder: (BuildContext context) => ServicesApp()));
                   },
                 ),
                 new ListTile(
@@ -62,7 +70,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new OrderApp()));
+                      builder: (BuildContext context) => OrderApp()));
                   },
                 ),
                 new ListTile(
@@ -71,7 +79,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new OrderApp()));
+                      builder: (BuildContext context) => AboutPage()));
                   },
                 ),
                 new ListTile(
@@ -80,7 +88,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new CartApp()));
+                      builder: (BuildContext context) => CartApp()));
                   },
                 ),
                 new ListTile(
@@ -89,7 +97,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new AboutPage()));
+                      builder: (BuildContext context) => null));
                   },
                 ),
                  new ListTile(
@@ -98,7 +106,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new SettingsPage()));
+                      builder: (BuildContext context) => SettingsPage()));
                   },
                 ),
                 new ListTile(
@@ -107,7 +115,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new ContactApp()));
+                      builder: (BuildContext context) => ContactApp()));
                   },
                 ),
                 Divider(
@@ -123,7 +131,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new AboutPage()));
+                      builder: (BuildContext context) => AboutPage()));
                   },
                 ),
                 new ListTile(
@@ -132,7 +140,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new AboutPage() ));
+                      builder: (BuildContext context) => AboutPage() ));
                   },
                 ),
                 new ListTile(
@@ -141,7 +149,7 @@ class EgHomeApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new PhoneLoginApp()));
+                      builder: (BuildContext context) => PhoneLoginApp()));
                   },
                 ),
               ],
@@ -160,6 +168,11 @@ class EgHomeApp extends StatelessWidget{
                 ));
               },
             ),
+            IconButton(
+              icon: Icon(Icons.language,color: Colors.white,),
+              onPressed: null,
+            ),
+            
           ],
         ),
         body: Stack(
@@ -177,22 +190,25 @@ class EgHomeApp extends StatelessWidget{
                         children: <Widget>[
                           SizedBox(height: 30),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          SizedBox(width: 40),
+                          //SizedBox(width: 25),
                           ListContent(img: 'assets/t-shirt.png'),
-                          SizedBox(width: 25),
+                          //SizedBox(width: 25),
                           ListContent(img: 'assets/dress.png'),
-                          SizedBox(width: 25),
+                          //SizedBox(width: 25),
                           ListContent(img: 'assets/jeans.png'),
                         ]
                       ),
                       Row(
+
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          SizedBox(width: 60),
+                          //SizedBox(width: 60),
                           Text("T-Shirt",style: TextStyle(fontSize:15, fontFamily: 'Lato',color:Colors.white)),
-                          SizedBox(width: 55),
+                          //SizedBox(width: 55),
                           Text("Dress",style: TextStyle(fontSize:15, fontFamily: 'Lato',color:Colors.white)),
-                          SizedBox(width: 65),
+                          //SizedBox(width: 65),
                           Text("Pants",style: TextStyle(fontSize:15, fontFamily: 'Lato',color:Colors.white)),
                         ]
                       ),
@@ -200,170 +216,7 @@ class EgHomeApp extends StatelessWidget{
                       )
                   ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: Card(
-                    child:Table(
-                      children:[
-                        TableRow(
-                          children: [ 
-                            Column(
-                              children: <Widget>[
-                                InkWell(
-                                  child: Image.asset('assets/washingm2.png',width: 100,height: 50),
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (context) => HomeViewApp()));
-                                  },),
-                                InkWell(
-                              child: Text('Washing',
-                              style: TextStyle(
-                              fontFamily: 'Lato'
-                           ),),
-                           onTap:() {
-                             Navigator.push(context, MaterialPageRoute(
-                               builder: (context)=> HomeViewApp(),
-                             ));
-                           }   
-                         ),
-                         Divider(
-                          thickness: 1, 
-                         ),
-                              ],
-                            ),
-                           // VerticalDivider(thickness: 2,),
-                             Column(
-                              children: <Widget>[
-                                InkWell(
-                                  child: Image.asset('assets/laundry.png',width: 100,height: 50),
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (context) => HomeViewApp()));
-                                  },),
-                                InkWell(
-                              child: Text('Others',
-                              style: TextStyle(
-                              fontFamily: 'Lato'
-                           ),),
-                           onTap:() {
-                             Navigator.push(context, MaterialPageRoute(
-                               builder: (context)=> HomeViewApp(),
-                             ));
-                           }   
-                         ),
-                         Divider(
-                           thickness: 1,
-                         ),
-                              ],
-                            ),
-                             //VerticalDivider(thickness: 2,),
-                            Column(
-                              children: <Widget>[
-                                InkWell(
-                                  child: Image.asset('assets/fashion.png',width: 100,height: 50),
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (context) => HomeViewApp()));
-                                  },),
-                                InkWell(
-                              child: Text('Others',
-                              style: TextStyle(
-                              fontFamily: 'Lato'
-                           ),),
-                           onTap:() {
-                             Navigator.push(context, MaterialPageRoute(
-                               builder: (context)=> HomeViewApp(),
-                             ));
-                           }   
-                         ),
-                         Divider(
-                           thickness: 1,
-                         ),
-                              ],
-                            ),
-                             //VerticalDivider(thickness: 2,),
-                           
-                            
-                         
-                          ]
-                        ),
-                        TableRow(
-                          children:[
-                             Column(
-                              children: <Widget>[
-                                InkWell(
-                                  child: Image.asset('assets/Iron.png',width: 100,height: 50),
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (context) => HomeViewApp()));
-                                  },),
-                                InkWell(
-                              child: Text('Others',
-                              style: TextStyle(
-                              fontFamily: 'Lato'
-                           ),),
-                           onTap:() {
-                             Navigator.push(context, MaterialPageRoute(
-                               builder: (context)=> HomeViewApp(),
-                             ));
-                           }   
-                         ),
-                         
-                              ],
-                            ),
-                            // VerticalDivider(thickness: 2,),
-                            Column(
-                              children: <Widget>[
-                                InkWell(
-                                  child: Image.asset('assets/washing.png',width: 100,height: 50),
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (context) => HomeViewApp()));
-                                  },),
-                                InkWell(
-                              child: Text('Others',
-                              style: TextStyle(
-                              fontFamily: 'Lato'
-                           ),),
-                           onTap:() {
-                             Navigator.push(context, MaterialPageRoute(
-                               builder: (context)=> HomeViewApp(),
-                             ));
-                           }   
-                         ),
-                         
-                              ],
-                            ),
-                            // VerticalDivider(thickness: 2,),
-                            Column(
-                              children: <Widget>[
-                                InkWell(
-                                  child: Image.asset('assets/towel.png',width: 100,height: 50),
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(
-                                      builder: (context) => HomeViewApp()));
-                                  },),
-                                InkWell(
-                              child: Text('Others',
-                              style: TextStyle(
-                              fontFamily: 'Lato'
-                           ),),
-                           onTap:() {
-                             Navigator.push(context, MaterialPageRoute(
-                               builder: (context)=> HomeViewApp(),
-                             ));
-                           }   
-                         ),
-                        
-                              ],
-                            ),
-                           
-                          ]
-                        )
-                      ]
-                    )
-                  ) 
-                  ),
+                 ExpandableList()
                 
           
                 ]
@@ -376,5 +229,267 @@ class EgHomeApp extends StatelessWidget{
         ]
       ),
     );   
+  }
+}
+
+
+class ExpandableList extends StatefulWidget {
+  
+
+  
+  bool isExpanded = false;
+
+  @override
+  _ExpandableListState createState() => new _ExpandableListState();
+}
+
+class _ExpandableListState extends State<ExpandableList>
+    with TickerProviderStateMixin<ExpandableList> {
+  @override
+  Widget build(BuildContext context) {
+    return new Column(children: <Widget>[
+      new AnimatedSize(
+          vsync: this,
+          duration: const Duration(milliseconds: 500),
+          child: new ConstrainedBox(
+              constraints: widget.isExpanded
+                  ? new BoxConstraints()
+                  : new BoxConstraints(maxHeight: 220.0),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Card(
+                  child:SingleChildScrollView(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Column(children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children:<Widget>[
+                          Column(
+                                  children: <Widget>[
+                                    InkWell(
+                                        child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => HomeViewApp()));
+                                        },),
+                                    InkWell(
+                                  child: Text('Others',
+                                  style: TextStyle(
+                                  fontFamily: 'Lato'
+                               ),),
+                               onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(
+                                   builder: (context)=> null,
+                                 ));
+                               }   
+                             ),
+                                  ]
+                          ),
+                         
+                           Column(
+                                  children: <Widget>[
+                                    InkWell(
+                                        child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => HomeViewApp()));
+                                        },),
+                                    InkWell(
+                                  child: Text('Others',
+                                  style: TextStyle(
+                                  fontFamily: 'Lato'
+                               ),),
+                               onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(
+                                   builder: (context)=> null,
+                                 ));
+                               }   
+                             ),
+                                  ]
+                          ),
+                           Column(
+                                  children: <Widget>[
+                                    InkWell(
+                                        child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => HomeViewApp()));
+                                        },),
+                                    InkWell(
+                                  child: Text('Others',
+                                  style: TextStyle(
+                                  fontFamily: 'Lato'
+                               ),),
+                               onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(
+                                   builder: (context)=> null,
+                                 ));
+                               }   
+                             ),
+                                  ]
+                          )
+                        ]
+                      ),
+                      SizedBox(height:10),
+                       Divider(
+                           thickness: 1,
+                         ),
+                      SizedBox(height:10),
+                       
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children:<Widget>[
+                          Column(
+                                  children: <Widget>[
+                                    InkWell(
+                                        child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => HomeViewApp()));
+                                        },),
+                                    InkWell(
+                                  child: Text('Others',
+                                  style: TextStyle(
+                                  fontFamily: 'Lato'
+                               ),),
+                               onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(
+                                   builder: (context)=> null,
+                                 ));
+                               }   
+                             ),
+                                  ]
+                          ),
+                           Column(
+                                  children: <Widget>[
+                                    InkWell(
+                                        child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => HomeViewApp()));
+                                        },),
+                                    InkWell(
+                                  child: Text('Others',
+                                  style: TextStyle(
+                                  fontFamily: 'Lato'
+                               ),),
+                               onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(
+                                   builder: (context)=> null,
+                                 ));
+                               }   
+                             ),
+                                  ]
+                          ),
+                           Column(
+                                  children: <Widget>[
+                                    InkWell(
+                                        child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => HomeViewApp()));
+                                        },),
+                                    InkWell(
+                                  child: Text('Others',
+                                  style: TextStyle(
+                                  fontFamily: 'Lato'
+                               ),),
+                               onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(
+                                   builder: (context)=> null,
+                                 ));
+                               }   
+                             ),
+                                  ]
+                          )
+                        ]
+                      ),
+                     SizedBox(height:10),
+                       Divider(
+                           thickness: 1,
+                         ),
+                      SizedBox(height:10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children:<Widget>[
+                          Column(
+                                  children: <Widget>[
+                                    InkWell(
+                                        child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => HomeViewApp()));
+                                        },),
+                                    InkWell(
+                                  child: Text('Others',
+                                  style: TextStyle(
+                                  fontFamily: 'Lato'
+                               ),),
+                               onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(
+                                   builder: (context)=> null,
+                                 ));
+                               }   
+                             ),
+                                  ]
+                          ),
+                         VerticalDivider(width: 15,color: Colors.black,),
+                                    Column(
+                                  children: <Widget>[
+                                    InkWell(
+                                        child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => HomeViewApp()));
+                                        },),
+                                    InkWell(
+                                  child: Text('Others',
+                                  style: TextStyle(
+                                  fontFamily: 'Lato'
+                               ),),
+                               onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(
+                                   builder: (context)=> null,
+                                 ));
+                               }   
+                             ),
+                                  ]
+                          ),
+                           Column(
+                                  children: <Widget>[
+                                    InkWell(
+                                        child: Image.asset('assets/washing.png',width: 100,height: 50),
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => HomeViewApp()));
+                                        },),
+                                    InkWell(
+                                  child: Text('Others',
+                                  style: TextStyle(
+                                  fontFamily: 'Lato'
+                               ),),
+                               onTap:() {
+                                 Navigator.push(context, MaterialPageRoute(
+                                   builder: (context)=> null,
+                                 ));
+                               }   
+                             ),
+                                  ]
+                          )
+                        ]
+                      )
+                    ],),
+                                      ),
+                  )
+                ),
+              ),
+              )),
+      widget.isExpanded
+          ? new ConstrainedBox(constraints: new BoxConstraints())
+          : new FlatButton(
+          child: const Text('...',style: TextStyle(fontSize: 25),),
+          onPressed: () => setState(() => widget.isExpanded = true))
+    ]);
   }
 }

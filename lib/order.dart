@@ -4,10 +4,10 @@ import 'package:tez/phonelogin.dart';
 import 'package:tez/services.dart';
 import 'package:tez/settings.dart';
 import 'eghome.dart';
+import 'mycart.dart';
 import 'rate.dart';
 import 'about.dart';
 import 'account.dart';
-import 'cart.dart';
 import 'contact.dart';
 import 'notificationpage.dart';
 
@@ -84,7 +84,7 @@ class OrderApp extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new CartApp()));
+                      builder: (BuildContext context) => new MyCartPage()));
                   },
                 ),
                 new ListTile(

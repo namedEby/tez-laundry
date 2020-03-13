@@ -1,6 +1,8 @@
 import  'package:flutter/material.dart';
 import 'package:tez/background3.dart';
-import 'package:tez/homepage.dart';
+
+import 'eghome.dart';
+//import 'package:tez/homepage.dart';
 
 
 class PhoneNoApp extends StatelessWidget {
@@ -57,7 +59,7 @@ class PhoneNoApp extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>HomePageApp())
+                                  builder: (context) => EgHomeApp())
                                   );
                 },
                        ),),

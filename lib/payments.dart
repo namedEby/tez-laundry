@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tez/about.dart';
 import 'package:tez/account.dart';
 import 'package:tez/banksuccess.dart';
-import 'package:tez/cart.dart';
 import 'package:tez/contact.dart';
+import 'package:tez/mycart.dart';
 import 'package:tez/notificationpage.dart';
 import 'package:tez/order.dart';
 import 'package:tez/phonelogin.dart';
@@ -85,7 +85,7 @@ class PaymentPage extends StatelessWidget {
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new CartApp()));
+                      builder: (BuildContext context) => new MyCartPage()));
                   },
                 ),
                 new ListTile(

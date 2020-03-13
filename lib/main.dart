@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tez/background1.dart';
 import 'package:tez/second_page.dart';
-//import 'eghome.dart';
+
+
+
 
 
 void main() {

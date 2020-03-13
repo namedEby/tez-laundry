@@ -3,8 +3,8 @@ import 'package:flutter_icons/flutter_icons.dart';
 
 import 'about.dart';
 import 'account.dart';
-import 'cart.dart';
 import 'contact.dart';
+import 'mycart.dart';
 import 'notificationpage.dart';
 import 'order.dart';
 import 'phonelogin.dart';
@@ -82,7 +82,7 @@ class SettingsPage extends StatelessWidget{
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => new CartApp()));
+                      builder: (BuildContext context) => new MyCartPage()));
                   },
                 ),
                 new ListTile(

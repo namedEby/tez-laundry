@@ -35,7 +35,7 @@ dependencies:
   validators: ^2.0.0+1
   email_validator: ^1.0.4
   pin_entry_text_field: ^0.1.4
-  translator: ^0.1.4
+  scoped_model: ^1.0.1
 
 
   

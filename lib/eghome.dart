@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:tez/mycart.dart';
 import 'package:tez/phonelogin.dart';
 import 'package:tez/services.dart';
 import 'package:tez/settings.dart';
 import 'about.dart';
 import 'account.dart';
-import 'cart.dart';
+//import 'cart.dart';
 import 'contact.dart';
 import 'notificationpage.dart';
 import 'order.dart';
 import 'listcontent.dart';
 import 'bottomsheet.dart';
-import 'package:translator/translator.dart';
+//import 'package:translator/translator.dart';
 
 
 class EgHomeApp extends StatefulWidget{
@@ -88,7 +89,7 @@ class _EgHomeAppState extends State<EgHomeApp> {
                   onTap: (){
                     Navigator.of(context).pop();
                     Navigator.push(context, new MaterialPageRoute(
-                      builder: (BuildContext context) => CartApp()));
+                      builder: (BuildContext context) => MyCartPage()));
                   },
                 ),
                 new ListTile(

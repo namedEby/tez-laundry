@@ -3,14 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:tez/background1.dart';
 import 'package:tez/second_page.dart';
 
-
-
-
-
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-  home: MyApp(),
+  home: MyApp() ,
     )
   );
 } 

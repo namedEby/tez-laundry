@@ -1,7 +1,6 @@
 import  'package:flutter/material.dart';
 import 'package:tez/background3.dart';
 import 'package:tez/otp_page.dart';
-//import 'package:flutter_country_picker/flutter_country_picker.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 
 

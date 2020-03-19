@@ -28,7 +28,6 @@ dependencies:
   country_code_picker: ^1.2.4
   geolocator: ^5.2.1
   location: ^2.4.0
-  pin_code_fields: ^2.3.0+3
   flutter_local_notifications: ^1.2.0+3
   path_provider: ^1.6.1
   flutter_rating_bar: ^3.0.1+1

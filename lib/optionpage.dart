@@ -48,8 +48,3 @@ class OptionPageApp extends StatelessWidget{
 
 }
 
-/*
-Text("Sign Up Using Phone",
-                      style: TextStyle(
-                        fontSize: 20,
-                      ))*/

@@ -29,16 +29,16 @@ class _EmailSignUpState extends State<EmailSignUp> {
       child: Column(
           children: <Widget>[
             Container(
-              alignment: Alignment.center,
+              alignment: Alignment.topCenter,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Background2App(),
                   Padding(
-                    padding: const EdgeInsets.only(top: 0.9,bottom: 10),
+                    padding: const EdgeInsets.only(top: 0.9,bottom: 20),
                     child: Container(
-              alignment: Alignment.center,  
+              alignment: Alignment.topCenter,  
               width: 150.0,
               height: 200.0,
               decoration: BoxDecoration(
@@ -57,7 +57,7 @@ class _EmailSignUpState extends State<EmailSignUp> {
           ),
                   ),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       
@@ -111,6 +111,19 @@ class _EmailSignUpState extends State<EmailSignUp> {
                 model.email = value;
               },
             ),
+            MyTextFormField(
+                          hintText: 'Phone Number',
+                          validator: (String value) {
+                            if (value.isEmpty) {
+                              return 'Enter your Phone Number';
+                            }
+                            return null;
+                          },
+                          onSaved: (String value) {
+                            model.phonenumber = value;
+                          },
+                        ),
+            
             MyTextFormField(
               hintText: 'Password',
               isPassword: true,

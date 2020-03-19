@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tez/about.dart';
 import 'package:tez/account.dart';
-
 import 'package:tez/contact.dart';
 import 'package:tez/notificationpage.dart';
 import 'package:tez/order.dart';
-//import './bottomsheet.dart';
 import './billpage.dart';
 import 'package:tez/phonelogin.dart';
 import 'package:tez/services.dart';
@@ -93,7 +91,7 @@ class MyCartPage extends StatelessWidget {
                   },
                 ),
                 new ListTile(
-                  leading: Image.asset('assets/g.png',color: Colors.lightBlueAccent),
+                  leading: Icon(Icons.info,color: Colors.lightBlueAccent),
                   title: new Text('About Us',style: TextStyle(fontSize: 17.0,fontFamily: 'Lato'),),
                   onTap: (){
                     Navigator.of(context).pop();

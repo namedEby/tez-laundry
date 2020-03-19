@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 
 
 class _MyAppState extends State<MyApp>{
-
+  Image img1;
   @override
   void initState() {
     super.initState();

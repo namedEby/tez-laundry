@@ -89,7 +89,7 @@ class PaymentPage extends StatelessWidget {
                   },
                 ),
                 new ListTile(
-                  leading: Image.asset('assets/g.png',color: Colors.lightBlueAccent),
+                  leading: Icon(Icons.info,color: Colors.lightBlueAccent),
                   title: new Text('About Us',style: TextStyle(fontSize: 17.0,fontFamily: 'Lato'),),
                   onTap: (){
                     Navigator.of(context).pop();
